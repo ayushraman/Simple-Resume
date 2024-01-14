@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Resume You May Love to Play with</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            text-align: center;
+            transition: background 0.3s, color 0.3s;
+            position: relative;
+        }
+
+        header {
+            padding: 2em;
+            color: #333;
+            animation: nameAnimation 5s infinite alternate; /* Animation for the name */
+            position: relative;
+            z-index: 1;
+        }
+
+        section {
+            padding: 20px;
+            color: #333;
+            margin: 20px;
+            border-radius: 10px;
+            position: relative;
+            z-index: 1;
+        }
+
+        h1, h2 {
+            font-family: 'Pacifico', cursive;
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+
+        p {
+            font-size: 1.2em;
+        }
+
+        /* Light Mode */
+        body.light-mode {
+            background: linear-gradient(to right, #ffafbd, #ffc3a0); /* Gradient 1 - Light Mode */
+        }
+
+        header.light-mode {
+            background: linear-gradient(to right, #c9d6ff, #e2e2e2); /* Gradient 2 - Light Mode */
+        }
+
+        section.light-mode {
+            background: linear-gradient(to right, #c2e59c, #64b3f4); /* Gradient 3 - Light Mode */
+        }
+
+        /* Dark Mode */
+        body.dark-mode {
+            background: linear-gradient(to right, #1a1a1a, #262626); /* Gradient 1 - Dark Mode */
+            color: #fff;
+        }
+
+        header.dark-mode {
+            background: linear-gradient(to right, #141414, #212121); /* Gradient 2 - Dark Mode */
+        }
+
+        section.dark-mode {
+            background: linear-gradient(to right, #222222, #333333); /* Gradient 3 - Dark Mode */
+        }
+
+        @keyframes nameAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        /* Stylish Toggle Button */
+        button.toggle-button {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 20px;
+            background: transparent;
+            color: #fff;
+            cursor: pointer;
+            font-size: 1em;
+            outline: none;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            transition: background 0.3s, color 0.3s, box-shadow 0.3s;
+            z-index: 2;
+        }
+
+        button.toggle-button:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #eee;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+        }
+    </style>
+</head>
+<body class="light-mode">
+    <header class="light-mode">
+        <h1>Ayush Raman</h1>
+        <p>Producer, Developer and Designer</p>
+    </header>
+
+    <section class="light-mode">
+        <h2>About Me</h2>
+        <p>It's me Ayush Raman (AR) a game developer, music producer and designer.</p>
+    </section>
+
+    <section class="light-mode">
+        <h2>Skills</h2>
+        <p>Game Development, Video and Music Production, Software Development etc.</p>
+    </section>
+
+    <section class="light-mode">
+        <h2>Experience</h2>
+        <p>Freelance Projects</p>
+        <p>Game Developer at a 3A Game Studio (Can't Name it xD)</p>
+    </section>
+
+    <!-- Add more sections for education, projects, etc. -->
+
+    <button class="toggle-button" onclick="toggleMode()">Toggle Mode</button>
+
+    <script>
+        function toggleMode() {
+            const body = document.body;
+            body.classList.toggle('light-mode');
+            body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>
